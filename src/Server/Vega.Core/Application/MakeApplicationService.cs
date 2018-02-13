@@ -27,7 +27,6 @@ namespace Vega.Core.Application
                 return null;
 
             return _mapper.Map<IEnumerable<MakeDto>>(makes);
-
         }
     }
 }
