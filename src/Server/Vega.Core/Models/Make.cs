@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 
 namespace Vega.Core.Models
 {
@@ -8,6 +9,7 @@ namespace Vega.Core.Models
         public Make()
         {
             Id = Guid.NewGuid();
+            Models = new Collection<Model>();
         }
 
         public Guid Id { get; private set; }
