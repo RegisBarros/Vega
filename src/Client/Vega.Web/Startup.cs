@@ -32,8 +32,10 @@ namespace Vega.Web
 
             services.AddScoped<IMakeApplicationService, MakeApplicationService>();
             services.AddScoped<IFeatureApplicationService, FeatureApplicationService>();
+            services.AddScoped<IVehicleApplicationService, VehicleApplicationService>();
             services.AddScoped<IMakeRepository, MakeRepository>();
             services.AddScoped<IFeatureRepository, FeatureRepository>();
+            services.AddScoped<IVehicleRepository, VehicleRepository>();
 
             services.AddMvc();
         }

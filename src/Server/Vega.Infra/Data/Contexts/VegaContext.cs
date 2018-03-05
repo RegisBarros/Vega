@@ -17,6 +17,8 @@ namespace Vega.Infra.Data.Contexts
 
         public DbSet<Feature> Features { get; set; }
 
+        public DbSet<Vehicle> Vehicles { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
@@ -24,6 +26,8 @@ namespace Vega.Infra.Data.Contexts
             modelBuilder.ApplyConfiguration(new ModelMap());
             modelBuilder.ApplyConfiguration(new MakeMap());
             modelBuilder.ApplyConfiguration(new FeatureMap());
+            modelBuilder.ApplyConfiguration(new VehicleMap());
+            modelBuilder.ApplyConfiguration(new VehicleFeatureMap());
         }
     }
 }

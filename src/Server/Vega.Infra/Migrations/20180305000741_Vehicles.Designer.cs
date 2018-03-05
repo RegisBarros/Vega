@@ -11,9 +11,10 @@ using Vega.Infra.Data.Contexts;
 namespace Vega.Infra.Migrations
 {
     [DbContext(typeof(VegaContext))]
-    partial class VegaContextModelSnapshot : ModelSnapshot
+    [Migration("20180305000741_Vehicles")]
+    partial class Vehicles
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -103,7 +104,7 @@ namespace Vega.Infra.Migrations
 
                     b.HasIndex("FeatureId");
 
-                    b.ToTable("VehicleFeatures");
+                    b.ToTable("VehicleFeature");
                 });
 
             modelBuilder.Entity("Vega.Core.Models.Model", b =>
